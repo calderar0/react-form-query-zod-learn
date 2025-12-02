@@ -106,15 +106,53 @@ Acesse `http://localhost:5173` para ver o projeto rodando.
 
 ---
 
-### Learn 3 - [A definir]
+### Learn 3 - Formulário Avançado com Zod + React Hook Form
 
 **Rota:** `/learn3`
 
-**Vídeo:** [Nome do Vídeo]  
-**Canal:** [Nome do Canal]  
-**Link:** [URL do vídeo]
+**Vídeo:** [Zod Validation in React (Complete Tutorial)]  
+**Canal:** [Cosden Solutions]  
+**Link:** [https://www.youtube.com/watch?v=U9PYyMhDc_k](https://www.youtube.com/watch?v=U9PYyMhDc_k)
 
-_Conteúdo a ser adicionado..._
+#### O que foi implementado:
+
+- ✅ Schema complexo do Zod com múltiplos tipos de dados:
+  - String com validação mínima
+  - Email com validação de formato
+  - URL opcional
+  - Number com validação de valor mínimo
+  - Array de objetos dinâmico
+  - Objetos aninhados
+  - Boolean (checkbox)
+- ✅ `useFieldArray` para gerenciar arrays dinâmicos
+  - Adicionar novos itens ao array
+  - Remover itens do array
+  - Validação individual de cada item
+- ✅ Conversão automática de tipos com `valueAsNumber`
+- ✅ Validações customizadas do Zod:
+  - `.min()` para valores mínimos
+  - `.optional()` para campos opcionais
+  - `.nullable()` para valores que podem ser null
+  - `.or(z.literal(""))` para aceitar string vazia
+- ✅ Integração completa Zod + React Hook Form via `zodResolver`
+- ✅ Tratamento de erros em arrays aninhados
+- ✅ Estilização com Tailwind CSS
+
+**Principais conceitos:**
+- `z.infer<>` - Extrai tipo TypeScript do schema Zod
+- `useFieldArray()` - Gerencia arrays dinâmicos no formulário
+- `control` - Objeto de controle do useForm necessário para useFieldArray
+- `fields`, `append`, `remove` - Manipulação de itens do array
+- `valueAsNumber` - Converte input string para number automaticamente
+- Arrays aninhados no React Hook Form com `register(\`array.\${index}.field\`)`
+- Validação de objetos complexos e aninhados com Zod
+
+**Casos de uso demonstrados:**
+- Formulário de cadastro de usuário completo
+- Lista dinâmica de amigos (adicionar/remover)
+- Campos opcionais vs obrigatórios
+- Validação de idade mínima
+- Checkbox para configurações
 
 ---
 
