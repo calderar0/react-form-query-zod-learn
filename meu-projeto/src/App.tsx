@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import Learn1 from './learn1/page'
 import Learn2 from './learn2/page'
+import Learn3 from './learn3/page'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       } />
       <Route path="/learn1" element={<Learn1 />} />
       <Route path="/learn2" element={<Learn2 />} />
+      <Route path="/learn3" element={<Learn3 />} />
     </Routes>
   )
 }
