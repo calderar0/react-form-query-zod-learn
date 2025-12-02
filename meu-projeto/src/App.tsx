@@ -12,6 +12,7 @@ function App() {
           <h1>Home</h1>
           <p><Link to="/learn1">Ir para Learn 1</Link></p>
           <p><Link to="/learn2">Ir para Learn 2 (React Query)</Link></p>
+          <p><Link to="/learn3">Ir para Learn 3 (Formulário Completo)</Link></p>
         </div>
       } />
       <Route path="/learn1" element={<Learn1 />} />
