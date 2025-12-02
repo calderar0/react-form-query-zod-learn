@@ -60,15 +60,49 @@ Acesse `http://localhost:5173` para ver o projeto rodando.
 
 ---
 
-### Learn 2 - [A definir]
+### Learn 2 - React Query (TanStack Query)
 
 **Rota:** `/learn2`
 
-**Vídeo:** [Nome do Vídeo]  
-**Canal:** [Nome do Canal]  
-**Link:** [URL do vídeo]
+**Vídeo:** [React Query / TanStack Query - Complete Tutorial]  
+**Canal:** [Cosden Solutions]  
+**Link:** [https://www.youtube.com/watch?v=8K1N3fE-cDs](https://www.youtube.com/watch?v=8K1N3fE-cDs)
 
-_Conteúdo a ser adicionado..._
+#### O que foi implementado:
+
+- ✅ Configuração do `QueryClient` e `QueryClientProvider`
+- ✅ `useQuery` para buscar dados (GET)
+  - Gerenciamento automático de cache
+  - Estados de loading
+  - Query keys para identificação única
+- ✅ `useMutation` para modificar dados (POST/PUT/DELETE)
+  - Invalidação automática de cache após mutações
+  - Callback `onSuccess`
+- ✅ Busca com debounce para otimizar requisições
+- ✅ Mock API com funções assíncronas
+- ✅ Sistema de TODO list com:
+  - Listagem de todos
+  - Adição de novos todos
+  - Busca/filtro em tempo real
+  - Checkbox de completado (apenas local)
+
+**Principais conceitos:**
+- `QueryClient` - Gerencia cache e configurações globais
+- `useQuery()` - Hook para buscar dados
+- `useMutation()` - Hook para modificar dados
+- `queryKey` - Identificador único para cache
+- `queryFn` - Função que busca os dados
+- `invalidateQueries()` - Força re-fetch de queries específicas
+- `staleTime` - Tempo que dados são considerados "frescos"
+- `gcTime` - Tempo que dados inativos ficam no cache (antes `cacheTime`)
+- Debounce pattern com `useEffect` e `setTimeout`
+
+**Arquivos criados:**
+- `src/Demo.tsx` - Componente principal com queries e mutations
+- `src/learn2/page.tsx` - Wrapper com QueryClientProvider
+- `src/api/intex.ts` - Mock API com fetchTodos e addTodo
+- `src/components/TodoCard.tsx` - Componente de item individual
+- `src/entities/Todo.ts` - Interface TypeScript do Todo
 
 ---
 
